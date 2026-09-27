@@ -1,0 +1,22 @@
+# Firebase App Hosting config for the "api" backend of the mazaofiti project.
+# Docs: https://firebase.google.com/docs/app-hosting/configure
+
+runConfig:
+  minInstances: 0
+  maxInstances: 10
+  concurrency: 80
+  cpu: 1
+  memoryMiB: 512
+
+env:
+  - variable: FIREBASE_PROJECT_ID
+    value: mazaofiti
+    availability:
+      - BUILD
+      - RUNTIME
+  # Set to the live URL of the "web" App Hosting backend once created, e.g.
+  # https://web--mazaofiti.us-central1.hosted.app
+  - variable: ALLOWED_ORIGIN
+    value: https://web--mazaofiti.us-central1.hosted.app
+    availability:
+      - RUNTIME

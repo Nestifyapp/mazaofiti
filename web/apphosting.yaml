@@ -1,0 +1,31 @@
+# Firebase App Hosting config for the "web" backend of the mazaofiti project.
+# Docs: https://firebase.google.com/docs/app-hosting/configure
+
+runConfig:
+  minInstances: 0
+  maxInstances: 10
+
+env:
+  # Set to the live URL of the "api" App Hosting backend once created, e.g.
+  # https://api--mazaofiti.us-central1.hosted.app
+  - variable: NEXT_PUBLIC_API_URL
+    value: https://api--mazaofiti.us-central1.hosted.app
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    value: your-mazaofiti-web-api-key
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: mazaofiti.firebaseapp.com
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: mazaofiti
+    availability:
+      - BUILD
+      - RUNTIME

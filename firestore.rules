@@ -1,0 +1,47 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    // Every signed-in user of Mazaofiti acts as an aggregator — there is no
+    // separate role system in the app itself.
+
+    // Users can read/write their own profile document.
+    match /users/{userId} {
+      allow read, create, update: if isOwner(userId);
+      allow delete: if false;
+    }
+
+    // Product catalogue: readable by any signed-in user. Writes only ever
+    // happen via the seed script (scripts/seedProducts.ts) using the
+    // Firebase Admin SDK, which bypasses these rules entirely — so client
+    // writes are always denied here.
+    match /products/{productId} {
+      allow read: if isSignedIn();
+      allow write: if false;
+    }
+
+    // Clients: each aggregator's own client book. Only the owning
+    // aggregator can read or write a given client.
+    match /clients/{clientId} {
+      allow read, update, delete: if isSignedIn() && resource.data.aggregatorId == request.auth.uid;
+      allow create: if isSignedIn() && request.resource.data.aggregatorId == request.auth.uid;
+    }
+
+    // Demand requests: owner (the aggregator) has full control. Only the
+    // owning aggregator can read their own requests.
+    match /demandRequests/{requestId} {
+      allow read: if isSignedIn() && resource.data.aggregatorId == request.auth.uid;
+      allow create: if isSignedIn() && request.resource.data.aggregatorId == request.auth.uid;
+      allow update, delete: if isSignedIn() && resource.data.aggregatorId == request.auth.uid;
+    }
+  }
+}

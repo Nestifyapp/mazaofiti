@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Maize",
+    "category": "Cereals",
+    "isActive": true,
+    "grades": [
+      { "grade": "Grade 1", "unit": "90kg bag", "costPerUnit": 4500, "currency": "KES" },
+      { "grade": "Grade 2", "unit": "90kg bag", "costPerUnit": 3900, "currency": "KES" }
+    ]
+  },
+  {
+    "name": "Beans",
+    "category": "Legumes",
+    "isActive": true,
+    "grades": [
+      { "grade": "Grade 1", "unit": "90kg bag", "costPerUnit": 9500, "currency": "KES" },
+      { "grade": "Grade 2", "unit": "90kg bag", "costPerUnit": 8200, "currency": "KES" }
+    ]
+  },
+  {
+    "name": "Irish Potatoes",
+    "category": "Tubers",
+    "isActive": true,
+    "grades": [
+      { "grade": "Grade A", "unit": "50kg bag", "costPerUnit": 2800, "currency": "KES" },
+      { "grade": "Grade B", "unit": "50kg bag", "costPerUnit": 2200, "currency": "KES" }
+    ]
+  },
+  {
+    "name": "Tomatoes",
+    "category": "Vegetables",
+    "isActive": true,
+    "grades": [
+      { "grade": "Grade A", "unit": "crate (64kg)", "costPerUnit": 3500, "currency": "KES" },
+      { "grade": "Grade B", "unit": "crate (64kg)", "costPerUnit": 2600, "currency": "KES" }
+    ]
+  },
+  {
+    "name": "Onions",
+    "category": "Vegetables",
+    "isActive": true,
+    "grades": [
+      { "grade": "Grade A", "unit": "50kg bag", "costPerUnit": 3200, "currency": "KES" },
+      { "grade": "Grade B", "unit": "50kg bag", "costPerUnit": 2500, "currency": "KES" }
+    ]
+  },
+  {
+    "name": "Avocado",
+    "category": "Fruits",
+    "isActive": true,
+    "grades": [
+      { "grade": "Export Grade", "unit": "kg", "costPerUnit": 55, "currency": "KES" },
+      { "grade": "Local Grade", "unit": "kg", "costPerUnit": 30, "currency": "KES" }
+    ]
+  },
+  {
+    "name": "Green Grams (Ndengu)",
+    "category": "Legumes",
+    "isActive": true,
+    "grades": [
+      { "grade": "Grade 1", "unit": "90kg bag", "costPerUnit": 12000, "currency": "KES" },
+      { "grade": "Grade 2", "unit": "90kg bag", "costPerUnit": 10500, "currency": "KES" }
+    ]
+  },
+  {
+    "name": "Bananas",
+    "category": "Fruits",
+    "isActive": true,
+    "grades": [
+      { "grade": "Grade A", "unit": "bunch", "costPerUnit": 450, "currency": "KES" },
+      { "grade": "Grade B", "unit": "bunch", "costPerUnit": 300, "currency": "KES" }
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "apphosting": [
+    {
+      "backendId": "web",
+      "rootDir": "./web",
+      "ignore": ["node_modules", ".git", "**/*.log"]
+    },
+    {
+      "backendId": "api",
+      "rootDir": "./api",
+      "ignore": ["node_modules", ".git", "**/*.log"]
+    }
+  ],
+  "emulators": {
+    "auth": { "port": 9099 },
+    "firestore": { "port": 8085 },
+    "ui": { "enabled": true }
+  }
+}
