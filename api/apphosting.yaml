@@ -17,6 +17,6 @@ env:
   # Set to the live URL of the "web" App Hosting backend once created, e.g.
   # https://web--mazaofiti.us-central1.hosted.app
   - variable: ALLOWED_ORIGIN
-    value: https://web--mazaofiti.us-central1.hosted.app
+    value: https://web--mazaofiti.us-east4.hosted.app
     availability:
       - RUNTIME
