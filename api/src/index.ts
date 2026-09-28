@@ -8,9 +8,13 @@ import { routesRouter } from "./routes/routes";
 
 const app = express();
 app.use(express.json());
+const allowedOrigins = process.env.ALLOWED_ORIGIN?.split(",")
+  .map((o) => o.trim().replace(/\/$/, "")) // trim whitespace and any trailing slash
+  .filter(Boolean);
+
 app.use(
   cors({
-    origin: process.env.ALLOWED_ORIGIN?.split(",") ?? "*",
+    origin: allowedOrigins?.length ? allowedOrigins : "*",
     credentials: true,
   })
 );

@@ -27,8 +27,10 @@ export default function ClientsPage() {
   return (
     <div className="stack">
       <h1>Clients</h1>
-      <ClientForm onCreated={(c) => setClients((prev) => [c, ...prev])} />
-      <ClientList clients={clients} />
+      <div className="dashboard-grid">
+        <ClientForm onCreated={(c) => setClients((prev) => [c, ...prev])} />
+        <ClientList clients={clients} />
+      </div>
     </div>
   );
 }

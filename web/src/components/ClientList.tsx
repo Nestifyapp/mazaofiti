@@ -15,6 +15,7 @@ export function ClientList({ clients }: { clients: Client[] }) {
   return (
     <div className="card">
       <h2>Your clients</h2>
+      <div className="table-wrap">
       <table>
         <thead>
           <tr>
@@ -33,6 +34,7 @@ export function ClientList({ clients }: { clients: Client[] }) {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }

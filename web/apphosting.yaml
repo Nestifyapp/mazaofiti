@@ -6,10 +6,9 @@ runConfig:
   maxInstances: 10
 
 env:
-  # Set to the live URL of the "api" App Hosting backend once created, e.g.
-  # https://api--mazaofiti.us-central1.hosted.app
+  # Live URL of the "api" App Hosting backend (europe-west4).
   - variable: NEXT_PUBLIC_API_URL
-    value: https://api--mazaofiti.us-central1.hosted.app
+    value: https://api--mazaofiti.europe-west4.hosted.app
     availability:
       - BUILD
       - RUNTIME

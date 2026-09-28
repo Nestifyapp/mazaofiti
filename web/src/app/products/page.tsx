@@ -29,6 +29,7 @@ export default function ProductsPage() {
         <div className="card" key={p.id}>
           <h2>{p.name}</h2>
           <h3>{p.category}</h3>
+          <div className="table-wrap">
           <table>
             <thead>
               <tr>
@@ -49,6 +50,7 @@ export default function ProductsPage() {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       ))}
     </div>

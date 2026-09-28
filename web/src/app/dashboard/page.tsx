@@ -27,8 +27,10 @@ export default function DashboardPage() {
   return (
     <div className="stack">
       <h1>Demand dashboard</h1>
-      <DemandRequestForm onCreated={(r) => setRequests((prev) => [r, ...prev])} />
-      <RequestList requests={requests} />
+      <div className="dashboard-grid">
+        <DemandRequestForm onCreated={(r) => setRequests((prev) => [r, ...prev])} />
+        <RequestList requests={requests} />
+      </div>
     </div>
   );
 }

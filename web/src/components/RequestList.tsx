@@ -15,6 +15,7 @@ export function RequestList({ requests }: { requests: DemandRequest[] }) {
   return (
     <div className="card">
       <h2>Your demand requests</h2>
+      <div className="table-wrap">
       <table>
         <thead>
           <tr>
@@ -45,6 +46,7 @@ export function RequestList({ requests }: { requests: DemandRequest[] }) {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }
